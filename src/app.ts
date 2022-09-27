@@ -95,10 +95,11 @@ import {
 import './app.scss'
 
 const App = createApp({
-  onShow (options) {},
+  onShow(options: any) {
+    console.log(options, 'onShow')
+  }
   // 入口组件不需要实现 render 方法，即使实现了也会被 taro 所覆盖
 })
-
 
 // 这里添加用到的 nutui 组件
 const nutuiComponents = [
@@ -193,7 +194,6 @@ const nutuiComponents = [
   Card,
   Table
 ]
-
 
 nutuiComponents.forEach((item) => {
   App.use(item)

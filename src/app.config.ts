@@ -1,7 +1,5 @@
 export default defineAppConfig({
-  pages: [
-    'pages/upload/index', 'pages/echarts/index', 'pages/webview/index', 'pages/index/index'
-  ],
+  pages: ['pages/index/index', 'pages/upload/index', 'pages/echarts/index', 'pages/webview/index'],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',

@@ -26,7 +26,14 @@
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
-    "dev:quickapp": "npm run build:quickapp -- --watch"
+    "dev:quickapp": "npm run build:quickapp -- --watch",
+    "git": "git add . && git cz && git push",
+    "hu": "husky install",
+    "test": "echo 'hello'",
+    "test1": "echo 'hello'",
+    "prettier": "prettier --write .",
+    "ll": "npx lint-staged",
+    "eslint": "eslint --fix ./src --ext .vue,.js,.ts"
   },
   "browserslist": [
     "last 3 versions",
@@ -74,6 +81,28 @@
     "vue-loader": "^16.0.0-beta.8",
     "@typescript-eslint/parser": "^5.20.0",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "typescript": "^3.7.0"
+    "typescript": "^3.7.0",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitizen": "^4.2.5",
+    "cz-customizable": "^6.9.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
+    "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --ext .js,.ts,.vue"
+    ],
+    "*.{js,jsx,ts,tsx,md,html,scss}": "prettier --write"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }
